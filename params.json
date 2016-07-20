@@ -1,0 +1,6 @@
+{
+  "name": "Blog",
+  "tagline": "林洽洽记录的地方",
+  "body": "###背包队列和栈\r\n\r\n![](![栈和队列](http://algs4.cs.princeton.edu/13stacks/images/collection-apis.png))\r\n####栈\r\n\r\n\r\n\r\n```java\r\n\r\npublic class Stack {\r\nprivate Node<Item> first;     // top of stack\r\nprivate int n;                // size of the stack\r\npublic boolean isEmpty() {   return first == null; }\r\npublic int size()\t\t\t\t  {   return n;}\r\npublic void push(Item item) {\r\n        Node<Item> oldfirst = first;\r\n        first = new Node<Item>();\r\n        first.item = item;\r\n        first.next = oldfirst;\r\n        n++;\r\n    }\r\npublic Item pop() {\r\n        if (isEmpty())\r\n         throw new NoSuchElementException(\"Stack underflow\");\r\n        Item item = first.item;        // save item to return\r\n        first = first.next;            // delete first node\r\n        n--;\r\n        return item;                   // return the saved item\r\n    }\r\n     }\r\n\r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
